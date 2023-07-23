@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_mars.mk
+    $(LOCAL_DIR)/cherish_mars.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_mars-user \
-    lineage_mars-userdebug \
-    lineage_mars-eng
+    cherish_mars-user \
+    cherish_mars-userdebug \
+    cherish_mars-eng

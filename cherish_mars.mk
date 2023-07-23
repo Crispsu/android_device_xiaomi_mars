@@ -12,13 +12,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/mars/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+
+# CherishOS Stuff with GApps
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+
+# Maintainer Stuff
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=Crisp
+CHERISH_BUILD_TYPE := OFFICIAL
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mars
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2102K1AC
-PRODUCT_NAME := lineage_mars
+PRODUCT_NAME := cherish_mars
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_SYSTEM_NAME := mars_global
